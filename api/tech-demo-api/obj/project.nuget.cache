@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "9MFpVwxtaT1rDDL1T02bSSTmiRMcLAvtHW62zDvdOaGq0xxVq3hH3FkeiqXuTknsKKfOK79LYAcvxvnEtYx7kQ==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\James\\WebstormProjects\\tech-demo\\api\\tech-demo-api\\tech-demo-api.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Swashbuckle.AspNetCore (>= 6.2.3)' for 'net6.0'.",
+      "libraryId": "Swashbuckle.AspNetCore",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}
