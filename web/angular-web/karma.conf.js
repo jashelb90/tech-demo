@@ -1,23 +1,18 @@
+/* eslint-disable */
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
-
-import karma_jasmine from 'karma-jasmine';
-
-import karma_chrome_launcher from 'karma-chrome-launcher';
-
-import karma_jasmine_html_reporter from 'karma-jasmine-html-reporter';
-
-import karma_coverage from 'karma-coverage';
-
-import generated from '@angular-devkit/build-angular/plugins/karma';
-
-import { join } from 'path';
 
 module.exports = function (config) {
     config.set({
         basePath: '',
         frameworks: ['jasmine', '@angular-devkit/build-angular'],
-        plugins: [karma_jasmine, karma_chrome_launcher, karma_jasmine_html_reporter, karma_coverage, generated],
+        plugins: [
+            require('karma-jasmine'),
+            require('karma-chrome-launcher'),
+            require('karma-jasmine-html-reporter'),
+            require('karma-coverage'),
+            require('@angular-devkit/build-angular/plugins/karma'),
+        ],
         client: {
             jasmine: {
                 // you can add configuration options for Jasmine here
@@ -31,7 +26,7 @@ module.exports = function (config) {
             suppressAll: true, // removes the duplicated traces
         },
         coverageReporter: {
-            dir: join(__dirname, './coverage/angular-web'),
+            dir: require('path').join(__dirname, './coverage/angular-web'),
             subdir: '.',
             reporters: [{ type: 'html' }, { type: 'text-summary' }],
         },
