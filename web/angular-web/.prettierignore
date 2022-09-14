@@ -1,0 +1,10 @@
+*.sh
+*.toml
+.editorconfig
+.eslintignore
+.gitignore
+.husky
+.prettierignore
+CODEOWNERS
+coverage/
+dist/
